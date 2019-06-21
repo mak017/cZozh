@@ -465,6 +465,7 @@ button:active {
   flex: 0 0 auto;
   height: 60px;
   margin-top: 1.5rem;
+  text-align: center;
 }
 
 @media (max-height: 765px) and (orientation: landscape),
