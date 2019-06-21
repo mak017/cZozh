@@ -209,6 +209,11 @@ textarea {
 
 /* MAIN STYLES */
 
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font: 16px/1.2 'Fira Sans', sans-serif;
 }
@@ -242,10 +247,8 @@ img {
 .header {
   position: relative;
   z-index: 0;
-  height: 7.5rem;
+  height: 5.5rem;
   background-color: rgba(248, 241, 242, 0.25);
-  -webkit-box-shadow: inset 0 -1px 0 0 #b8c1cb;
-  box-shadow: inset 0 -1px 0 0 #b8c1cb;
 }
 
 .header .container {
@@ -266,6 +269,11 @@ img {
   letter-spacing: -2.67px;
 }
 
+.header__logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .header__logo span:nth-of-type(2) {
   position: relative;
   margin-left: 3px;
@@ -277,7 +285,7 @@ img {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  right: -3px;
   bottom: 0;
   left: 0;
   z-index: -1;
@@ -301,8 +309,6 @@ img {
 .footer {
   height: 50px;
   background-color: rgba(249, 245, 246, 0.25);
-  -webkit-box-shadow: inset 0 1px 0 0 #b8c1cb;
-  box-shadow: inset 0 1px 0 0 #b8c1cb;
 }
 
 .footer .container {
@@ -348,6 +354,8 @@ button {
   margin: auto;
   border: 0;
   border-radius: 2px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   background-color: #f84562;
   color: #fff;
   font-size: 1.5rem;
@@ -357,11 +365,18 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #f96b82;
+}
+button:active {
+  background-color: #db3550;
+}
+
 .screen1 .big-text {
   margin-bottom: 3.125rem;
 }
 
-.screen2 {
+.screen2, .screen3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +386,7 @@ button {
   flex-direction: column;
 }
 
-.screen2[hidden] {
+.screen2[hidden], .screen3[hidden] {
   display: none;
 }
 
@@ -422,6 +437,7 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   min-height: 26.25rem;
+  padding: 20px 0;
   text-align: center;
 }
 
