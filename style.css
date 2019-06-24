@@ -441,7 +441,7 @@ button:active {
   text-align: center;
 }
 
-.image-container::before {
+.screen2 .image-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -580,7 +580,7 @@ button:active {
     min-height: 15.9375rem;
   }
 
-  .image-container::before {
+  .screen2 .image-container::before {
     min-width: 226px;
   }
 
