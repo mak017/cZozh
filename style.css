@@ -468,11 +468,13 @@ button:active {
 
 .image-container .overlay {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
-  bottom: 0;
   left: 0;
+  height: 100%;
+  max-height: 318px;
   padding: 2.5rem 15px;
+  transform: translateY(-50%);
   background-color: rgba(253, 240, 240, 0.9);
   text-align: left;
 }
@@ -483,15 +485,6 @@ button:active {
   font-style: italic;
   font-weight: 900;
   line-height: 1;
-}
-
-.addthis_inline_share_toolbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-left: -15px;
-  padding: 15px 15px 10px 13px;
-  background-color: #fff;
 }
 
 .screen3 .image-container {
@@ -627,5 +620,12 @@ button:active {
 
   .image-container + button {
     margin-top: 0.5rem;
+  }
+  .image-container .overlay p {
+    font-size: 1.7rem;
+  }
+  
+  .screen3 .image-container {
+    min-height: auto;
   }
 }
