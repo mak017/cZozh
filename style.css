@@ -455,8 +455,49 @@ button:active {
   background-color: #fdf0f0;
 }
 
+.image-container img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .image-container + button {
   margin-top: 1.5rem;
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2.5rem 15px;
+  background-color: rgba(253, 240, 240, 0.9);
+  text-align: left;
+}
+
+.image-container .overlay p {
+  margin: 0 0 2rem;
+  font-size: 2.7rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.addthis_inline_share_toolbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: -15px;
+  padding: 15px 15px 10px 13px;
+  background-color: #fff;
+}
+
+.screen3 .image-container {
+  padding: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .gaw-container {
